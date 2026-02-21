@@ -1,18 +1,27 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useBudget } from "../contexts/BudgetContext";
 import { Link } from "react-router-dom";
+
 const fakeStoreProducts = "https://fakestoreapi.com/products";
 
 export default function ProductsPage() {
+  const { budgetMode, setBudgetMode } = useBudget();
+  console.log(budgetMode);
   const [fakeProducts, setFakeProducts] = useState([]);
   const fetchProducts = () => {
     axios.get(fakeStoreProducts).then((res) => {
       console.log(res.data);
-      setFakeProducts(res.data);
+
+      if (budgetMode === true) {
+        setFakeProducts(res.data.filter((product) => product.price <= 30));
+      } else {
+        setFakeProducts(res.data);
+      }
     });
   };
 
-  useEffect(fetchProducts, []);
+  useEffect(fetchProducts, [budgetMode]);
 
   return (
     <>

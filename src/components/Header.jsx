@@ -10,11 +10,7 @@ export default function Header() {
       <nav className="navbar navbar-expand-lg bg-success ">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
-            <img
-              src="public\logo.png"
-              alt="FakeStore logo"
-              title="FakeStore logo"
-            />
+            <img src="/logo.png" alt="FakeStore logo" title="FakeStore logo" />
           </NavLink>
 
           <div className="navbar-nav d-flex flex-column align-items-end">
