@@ -3,7 +3,9 @@ import { useBudget } from "../contexts/BudgetContext";
 
 export default function Header() {
   const { budgetMode, setBudgetMode } = useBudget();
+  const { maxPrice, setMaxPrice } = useBudget();
   console.log(budgetMode);
+  console.log(maxPrice);
 
   return (
     <header>
@@ -25,7 +27,7 @@ export default function Header() {
                 About us
               </NavLink>
             </div>
-            <div>
+            <div className="d-flex flex-column">
               <button
                 className={
                   budgetMode === false ? "btn btn-warning" : "btn btn-danger"
@@ -36,6 +38,17 @@ export default function Header() {
                   ? "Attiva Budget Mode"
                   : "Disattiva Budget Mode"}
               </button>
+              <input
+                type="number"
+                placeholder="Prezzo Max..."
+                className="input-group"
+                value={maxPrice}
+                onChange={(e) =>
+                  setMaxPrice(
+                    e.target.value === "" ? "" : Number(e.target.value),
+                  )
+                }
+              />
             </div>
           </div>
         </div>

@@ -7,21 +7,27 @@ const fakeStoreProducts = "https://fakestoreapi.com/products";
 
 export default function ProductsPage() {
   const { budgetMode, setBudgetMode } = useBudget();
-  console.log(budgetMode);
+  const { maxPrice, setMaxPrice } = useBudget();
+
+  // Fetch prodotti
   const [fakeProducts, setFakeProducts] = useState([]);
   const fetchProducts = () => {
     axios.get(fakeStoreProducts).then((res) => {
       console.log(res.data);
 
-      if (budgetMode === true) {
-        setFakeProducts(res.data.filter((product) => product.price <= 30));
-      } else {
-        setFakeProducts(res.data);
-      }
+      axios.get(fakeStoreProducts).then((res) => {
+        if (budgetMode === false || maxPrice === "" || maxPrice === null) {
+          setFakeProducts(res.data);
+        } else {
+          setFakeProducts(
+            res.data.filter((product) => product.price <= maxPrice),
+          );
+        }
+      });
     });
   };
 
-  useEffect(fetchProducts, [budgetMode]);
+  useEffect(fetchProducts, [budgetMode, maxPrice]);
 
   return (
     <>
