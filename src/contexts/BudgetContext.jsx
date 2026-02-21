@@ -13,7 +13,7 @@ function BudgetProvider({ children }) {
 }
 
 function useBudget() {
-    return useContext{BudgetContext}
+  return useContext(BudgetContext);
 }
 
-export {BudgetProvider, useBudget}
+export { BudgetProvider, useBudget };
