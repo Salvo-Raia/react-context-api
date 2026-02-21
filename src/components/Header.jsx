@@ -15,7 +15,7 @@ export default function Header() {
             <img src="/logo.png" alt="FakeStore logo" title="FakeStore logo" />
           </NavLink>
 
-          <div className="navbar-nav d-flex flex-column align-items-end">
+          <div className="navbar-nav d-flex flex-column ">
             <div className="d-flex">
               <NavLink to="/" className="nav-link">
                 Home
@@ -27,20 +27,26 @@ export default function Header() {
                 About us
               </NavLink>
             </div>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column justify-content-center">
               <button
                 className={
                   budgetMode === false ? "btn btn-warning" : "btn btn-danger"
                 }
                 onClick={() => setBudgetMode((prev) => !prev)}
               >
-                {budgetMode === false
-                  ? "Attiva Budget Mode"
-                  : "Disattiva Budget Mode"}
+                {budgetMode === false ? (
+                  <>
+                    <i class="bi bi-wallet2"></i> Attiva Budget Mode
+                  </>
+                ) : (
+                  <>
+                    <i class="bi bi-cash-stack"></i> Disattiva Budget Mode
+                  </>
+                )}
               </button>
               <input
                 type="number"
-                placeholder="Prezzo Max..."
+                placeholder="Prezzo Max €"
                 className="input-group"
                 value={maxPrice}
                 onChange={(e) =>

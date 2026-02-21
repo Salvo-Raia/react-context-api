@@ -3,6 +3,19 @@ header img {
     height: 100px;
 }
 
+header input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: right;
+}
+
+header input::placeholder {
+color: rgb(201, 201, 201);
+text-align: right
+}
 
 
 /*HomePage */ 
