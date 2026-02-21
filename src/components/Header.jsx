@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useBudget } from "../contexts/BudgetContext";
+
 export default function Header() {
+  const { budgetMode, setBudgetMode } = useBudget();
+  console.log(budgetMode);
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-success ">
@@ -11,22 +16,9 @@ export default function Header() {
               title="FakeStore logo"
             />
           </NavLink>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarNavAltMarkup"
-          >
-            <div className="navbar-nav text-white">
+
+          <div className="navbar-nav d-flex flex-column align-items-end">
+            <div className="d-flex">
               <NavLink to="/" className="nav-link">
                 Home
               </NavLink>
@@ -36,6 +28,18 @@ export default function Header() {
               <NavLink to="/about-us" className="nav-link">
                 About us
               </NavLink>
+            </div>
+            <div>
+              <button
+                className={
+                  budgetMode === false ? "btn btn-warning" : "btn btn-danger"
+                }
+                onClick={() => setBudgetMode((prev) => !prev)}
+              >
+                {budgetMode === false
+                  ? "Attiva Budget Mode"
+                  : "Disattiva Budget Mode"}
+              </button>
             </div>
           </div>
         </div>
