@@ -1,6 +1,6 @@
-![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-# 🎓 Exercise 40/50 - React Context API
+# 🎓 Exercise 40/50: React Context API
 
 Extend the mini e-commerce application by introducing React Context API to manage a shared budget mode, allowing users to filter products based on their price.
 
@@ -17,7 +17,7 @@ Extend the mini e-commerce application by introducing React Context API to manag
 
 Implement a shared context to manage the application's budget mode and control which products are displayed in the store.
 
-### Milestone 1 - Create the Budget Context
+#### Milestone 1 - Create the Budget Context
 
 Create a new context called `BudgetContext`.
 
@@ -25,7 +25,7 @@ Create a new context called `BudgetContext`.
 - Provide the `setBudgetMode` function to update its value.
 - Wrap the entire application with the `BudgetProvider`.
 
-### Milestone 2 - Update the Navbar
+#### Milestone 2 - Update the Navbar
 
 Create a `Navbar.jsx` component if one does not already exist.
 
@@ -35,7 +35,7 @@ Create a `Navbar.jsx` component if one does not already exist.
   - `Activate Budget Mode`
   - `Deactivate Budget Mode`
 
-### Milestone 3 - Filter Products
+#### Milestone 3 - Filter Products
 
 Modify the Products page to use the shared context.
 
@@ -43,7 +43,7 @@ Modify the Products page to use the shared context.
 - When `budgetMode` is `true`, display only products with `price <= 30`.
 - Otherwise, display all products normally.
 
-### Bonus - Dynamic Price Filter
+### ⭐ Bonus
 
 Turn budget mode into a configurable price filter.
 
@@ -55,7 +55,7 @@ Turn budget mode into a configurable price filter.
 
 ## 🛠️ Technologies
 
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
 ## 💡 What I Learned
 
@@ -70,4 +70,4 @@ Turn budget mode into a configurable price filter.
 
 ## ©️ Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
