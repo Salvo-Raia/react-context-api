@@ -14,7 +14,7 @@ Extend the mini e-commerce application by introducing React Context API to manag
 
 Implement a shared context to manage the application's budget mode and control which products are displayed in the store.
 
-#### Milestone 1: Create the Budget Context
+#### Milestone 1: Create the budget context
 
 Create a new context called `BudgetContext`.
 
@@ -22,7 +22,7 @@ Create a new context called `BudgetContext`.
 - Provide the `setBudgetMode` function to update its value.
 - Wrap the entire application with the `BudgetProvider`.
 
-#### Milestone 2: Update the Navbar
+#### Milestone 2: Update the navbar
 
 Create a `Navbar.jsx` component if one does not already exist.
 
@@ -32,7 +32,7 @@ Create a `Navbar.jsx` component if one does not already exist.
   - `Activate Budget Mode`
   - `Deactivate Budget Mode`
 
-#### Milestone 3: Filter Products
+#### Milestone 3: Filter products
 
 Modify the Products page to use the shared context.
 
