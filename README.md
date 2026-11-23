@@ -8,7 +8,7 @@ Extend the mini e-commerce application by introducing React Context API to manag
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| react-context-api | React Context API | Exercise | React Context & Dynamic filtering | 40/50 |
+| react-context-api | React Context API | Exercise | React Context, dynamic filtering | 40/50 |
 
 ## Assignment
 
